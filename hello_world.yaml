@@ -1,4 +1,4 @@
-- name: Hello World Sample
+- name: Hello World Sample for RHACM integration demonstration
   hosts: all
   tasks:
     - name: Hello World message from RHACM automation hook
