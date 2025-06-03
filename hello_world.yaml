@@ -4,4 +4,5 @@
     - name: Hello World message from RHACM automation hook
       debug:
         msg: "Hello World! Red Hat ACM here."
-
+    - name: Output Hello World using shell
+      ansible.builtin.shell: echo "Hello World! Red Hat ACM here."
