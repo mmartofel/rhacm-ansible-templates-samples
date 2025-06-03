@@ -3,8 +3,17 @@
   connection: local
   gather_facts: false
   tasks:
+    - name: Show system hostname
+      ansible.builtin.shell: hostname
+      register: hostname_result
     - name: Hello World message from RHACM automation hook
       debug:
         msg: "Hello World! Red Hat ACM here."
+    - name: Show inventory hostname
+      debug:
+        msg: "This is the inventory hostname: {{ inventory_hostname }}"
+    - name: Show hostname
+      debug:
+        msg: "The system hostname is: {{ hostname_result.stdout }}"
     - name: Output Hello World using shell
       ansible.builtin.shell: echo "Hello World! Red Hat ACM here."
