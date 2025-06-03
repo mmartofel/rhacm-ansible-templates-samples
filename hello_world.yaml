@@ -1,0 +1,7 @@
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Hello World message from RHACM automation hook
+      debug:
+        msg: "Hello World! Red Hat ACM here."
+
