@@ -3,8 +3,8 @@
   connection: local
   gather_facts: false
   tasks:
-    - name: Show system hostname
-      ansible.builtin.shell: hostname
+    - name: Show system os
+      ansible.builtin.shell: uname -a
       register: hostname_result
     - name: Hello World message from RHACM automation hook
       debug:
