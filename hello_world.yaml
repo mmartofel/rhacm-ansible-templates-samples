@@ -17,3 +17,6 @@
         msg: "The system hostname is: {{ hostname_result.stdout }}"
     - name: Output Hello World using shell
       ansible.builtin.shell: echo "Hello World! Red Hat ACM here."
+    - debug:
+      msg: "Policy {{ policy_name }} in {{ policy_namespace }} is {{ policy_violations }}"
+
